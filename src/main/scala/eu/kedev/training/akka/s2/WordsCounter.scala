@@ -1,6 +1,6 @@
 package eu.kedev.training.akka.s2
 
-import akka.actor.{Actor, ActorLogging, Props}
+import akka.actor.{SupervisorStrategy, Actor, ActorLogging, Props}
 import eu.kedev.training.akka.s2.WordsCounter.Count
 
 object WordsCounter {
@@ -14,6 +14,8 @@ class WordsCounter extends Actor with ActorLogging {
   def receive = {
     reqCount = reqCount + 1
     log.info("Someone says I should count. " + reportReqCount)
+
+    //SupervisorStrategy.defaultStrategy
 
     {
       case Count(null) =>

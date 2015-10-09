@@ -1,11 +1,7 @@
 package eu.kedev.training.akka.s1
 
 import akka.actor.ActorSystem
-import akka.actor.Actor
-import akka.actor.Props
 import akka.testkit.{ TestActors, TestKit, ImplicitSender }
-import com.example.PingActor
-import com.example.PongActor
 import eu.kedev.training.akka.s1
 import org.scalatest.WordSpecLike
 import org.scalatest.Matchers
